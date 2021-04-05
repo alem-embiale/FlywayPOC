@@ -1,9 +1,9 @@
-USE SmartGrid;
-GO
-
-CREATE TABLE Registration_User (
+CREATE TABLE Utility (
     id int primary key,
-    user_name varchar(255) NOT NULL,
-    first_name varchar(255) NOT NULL
+    code int NOT NULL
 );
-GO
+
+CREATE TABLE Event (
+    id int primary key,
+    utility_event_signal int not null
+)
