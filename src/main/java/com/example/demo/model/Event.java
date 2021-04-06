@@ -9,14 +9,15 @@ import javax.persistence.*;
 @Table
 public class Event {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
+    private int id;
 
-    private long utility_event_signal;
+    @Column(name="utility_event_signal")
+    private int utility_event_signal;
 
     @OneToOne(targetEntity = Utility.class)
-    @JoinColumn(name = "utility_code", referencedColumnName = "code", updatable = false)
+    @JoinColumn(name="utility_id", referencedColumnName = "id", updatable = false)
     private Utility utility;
 
 }

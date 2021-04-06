@@ -11,8 +11,9 @@ public class Utility {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name="id")
+    private int id;
 
-    @Column
-    private long code;
+    @Column(name="code")
+    private int code;
 }
