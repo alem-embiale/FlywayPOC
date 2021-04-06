@@ -1,0 +1,1 @@
+ALTER TABLE Event ADD utility_code int;
