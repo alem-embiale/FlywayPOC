@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.4.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id("org.flywaydb.flyway") version "6.5.0"
 }
 
 group = 'com.example'
@@ -32,3 +33,10 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+flyway {
+	url="jdbc:sqlserver://localhost;databaseName=SmartGrid"
+	user="sa"
+	password="Solongnew2!"
+}
+
