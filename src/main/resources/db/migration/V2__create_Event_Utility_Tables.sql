@@ -9,3 +9,5 @@ CREATE TABLE Event (
     utility_event_signal int,
     utility_id int
 )
+
+CREATE UNIQUE index UQ_Event__utilityId_utilitySignal On Event(utility_id, utility_event_signal)

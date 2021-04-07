@@ -1,1 +1,0 @@
-ALTER TABLE Event DROP COLUMN utility_id;
